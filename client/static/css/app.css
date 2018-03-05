@@ -1,0 +1,153 @@
+/* ==\/==\/==\/==\/== Color Variables ==\/==\/==\/==\/== */
+:root{
+    --color1: #f2f1f0;
+    --color2: #d9d9d8;
+    --color3: #878a8e;
+    --color4: #181818;
+}
+
+
+
+/* ==\/==\/==\/==\/== Navigation / Top Bar ==\/==\/==\/==\/== */
+header{
+    background-color:var(--color4);    
+    height: 60px;
+}
+
+header a img{
+    margin-left: 2%;
+    margin-top: 0.5%;
+    width: 300px;
+}
+
+.title-bar{
+    background-color:var(--color4) !important;
+}
+
+.top-bar, .top-bar .menu{
+    background-color:var(--color4);
+}
+
+.top-bar .menu a{
+    color: var(--color2);
+}
+
+
+
+/* ==\/==\/==\/==\/== Main Body and Header ==\/==\/==\/==\/== */
+body{
+    background-color:var(--color3);
+}
+
+.main-container{
+    padding-top: 2.5rem;
+    color: var(--color4);
+}
+
+.main-container h2{
+    font-weight: 500;
+    text-decoration: underline;
+}
+
+.main-container .pitch{
+    margin-bottom: 3.5rem;
+}
+
+
+/* ==\/==\/==\/==\/== Projects Section ==\/==\/==\/==\/== */
+.main-container .project{
+    margin-bottom: .8rem;
+}
+
+.main-container .project .projImg{
+    border-radius: 5px;
+    height: 100%;
+    width: 100%;
+    max-height: 400px;
+    max-width: 350px;
+
+}
+
+.main-container .project .info{
+    position: relative;
+    margin: 0; 
+    height: 0;
+    top: -90%;
+    opacity: 0;
+
+    color: var(--color4);
+    text-shadow: 1px 1px var(--color2);    
+}
+
+
+.main-container .project .info h4{
+    font-weight: 500;
+}
+
+.main-container .project .info p{
+    margin-top: 40%;
+    font-weight: 500;
+}
+
+.main-container .project .info img{
+    max-width: 10%;
+}
+
+.main-container .project:hover .projImg{
+    filter: blur(4px);
+}
+
+.main-container .project:hover .info{
+    opacity: 1;
+}
+
+/* ==\/==\/==\/==\/== About Us Section ==\/==\/==\/==\/== */
+
+.aboutUs{
+    margin-top: 3rem;
+}
+
+.aboutUs h2{
+    margin-bottom: 1.5rem;
+}
+
+
+/* ==\/==\/==\/==\/== Contact Us Section ==\/==\/==\/==\/== */
+
+#contactUs{
+    margin-top: 3rem;
+    height: 450px;
+}
+
+#contactUs h2{
+    margin-bottom: 1.5rem;
+}
+
+#contactUs textarea{
+    height: 7.5rem;
+}
+
+
+
+@media screen and (max-width: 39.9375em) {
+    header a img{
+        margin-top: 0;        
+        width: 50%;
+        max-height: 60px;
+    }
+    
+    .title-bar{
+        margin-top: -50px;
+    }
+
+    .top-bar-right .menu{
+        justify-content: center;
+    }
+
+    .main-container .project .info{
+        position: relative;
+        top: -350px;
+    }
+    
+
+}
