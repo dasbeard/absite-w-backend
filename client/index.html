@@ -85,44 +85,45 @@
             </div>
 
             <div class="cell medium-auto medium-cell-block-container">
-                <form>
+
+                <form id="contactForm" action="post">
                     <div class="grid-x grid-padding-x align-center">
                         
                         <div class="cell medium-5 medium-cell-block-y">
                             <label>Name <span>*</span>
-                                <input type="text">
+                                <input name="name" class="required" type="text">
                             </label>
 
                             <label>Email <span>*</span>
-                                <input type="email">
+                                <input name="email" class="required email" type="email">
                             </label>
                             
-                            <label>Phone Number <span>*</span>
-                                <input type="tel">
+                            <label>Phone Number
+                                <input name="phone" class="required" type="tel">
                             </label>
 
                         </div>
                         
                         <div class="cell medium-5 medium-cell-block-y">
-                            <label>Interested In <span>*</span>
-                                <select>
-                                    <option value="personalSite">Personal Website</option>
-                                    <option value="businessSite">Buisiness Website</option>
-                                    <option value="eComSite">E-Commerce</option>
-                                    <option value="marketing">Analytics/ Google AdWords</option>
+                            <label>Interested In
+                                <select name="interest" id="interest">
+                                    <option value="Personal Site">Personal Website</option>
+                                    <option value="Business Site">Buisiness Website</option>
+                                    <option value="E-Commerce">E-Commerce</option>
+                                    <option value="Marketing">Analytics/ Google AdWords</option>
                                 </select>
                             </label>
 
                             <label>
                                 Questions or Comments?
-                                <textarea></textarea>
+                                <textarea name="question" id="question"></textarea>
                             </label>
                         </div>
 
                     </div>
 
                     <div class="grid-x grid-padding-x align-center">
-                            <a class="button" href="#">Submit</a>
+                        <input type="submit" class="button" value="Submit">
                     </div>
                 </form>
             </div>        
@@ -137,5 +138,11 @@
     <script src="js/vendor/what-input.js"></script>
     <script src="js/vendor/foundation.js"></script>
     <script src="js/app.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery-validate/1.17.0/jquery.validate.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery-validate/1.17.0/additional-methods.min.js"></script>
+    
+
+    
+
 </body>
 </html>
