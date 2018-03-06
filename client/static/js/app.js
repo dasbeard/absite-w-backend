@@ -14,43 +14,58 @@ $(document).ready(function(){
 
 
 
-
-
     /*======= Validate Form ========*/
-    $('#contactForm').validate({
-      rules: {
-        phone: {
-          phoneUS: true
-        },
-        name: {
-          lettersonly:true
-        },
-      }
-    });
+    // $('#contactForm').validate({
+    //   rules: {
+    //     phone: {
+    //       phoneUS: true
+    //     },
+    //   }
+    // })
+    
+
+$('#formSubmit').on('click', function(){
+  var toSend = {
+    name:$('input[name=name]').val(),
+    email: $('input[name=email]').val(),
+    phone: $('input[name=phone]').val(),
+    interest: $("#interest").find(":selected").val(),
+    question: $("#question").val(),
+  };
+
+  $.ajax({
+    type: 'POST',
+    url: "/form",
+    data: toSend,
+    success: function(){     
+      alert('Thanks for contact us, we will be in touch within 48 hours')
+    },
+    error: function(){
+      alert('Somehting went wrong, please try again')
+      
+    }
+  });
 
 
-    /*======= Gather Form Information ========*/
-    var form = $('#contactForm');
-
-    form.submit(function(event){
-
-    var toSend = {
-      name:$('input[name=name]').val(),
-      email: $('input[name=email]').val(),
-      phone: $('input[name=phone]').val(),
-      interest: $("#interest").find(":selected").val(),
-      question: $("#question").val(),
-    };
-
-    console.log(toSend);
-
-    return false;
+  
+  return false;
+});
 
 
 
-    /* =~=~=~=~=~= Need to get to back-end and varify its not sending not valid forms =~=~=~=~=~= */
-    })
 
+
+    // function sendForm(){
+    //   $.when($.ajax({
+    //     url: "http://localhost:9000/form",
+    //     type: 'json'
+    //   }))
+    //   .then(function(result) {
+    //     console.log(result);
+
+        
+    //   })
+    // }
 
 });
 

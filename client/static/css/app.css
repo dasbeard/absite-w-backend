@@ -85,7 +85,7 @@ body{
 }
 
 .main-container .project .info p{
-    margin-top: 40%;
+    margin-top: 38%;
     font-weight: 500;
 }
 
@@ -157,7 +157,7 @@ body{
 
     .main-container .project .info{
         position: relative;
-        top: -350px;
+        top: -275px;
     }
     
 
