@@ -1,7 +1,6 @@
 // =========================================================================
 // ========================= Required Models ===============================
 // =========================================================================
-var users = require('./../controllers/users.js');
 var messages = require('./../controllers/messages.js');
 
 module.exports = function(app){
