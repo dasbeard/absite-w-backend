@@ -4,6 +4,14 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="apple-touch-icon" sizes="180x180" href="./assets/favicon/apple-touch-icon.png">
+    <link rel="icon" type="image/png" sizes="32x32" href="./assets/favicon/favicon-32x32.png">
+    <link rel="icon" type="image/png" sizes="16x16" href="./assets/favicon/favicon-16x16.png">
+    <link rel="manifest" href="./assets/favicon/site.webmanifest">
+    <link rel="mask-icon" href="./assets/favicon/safari-pinned-tab.svg" color="#5bbad5">
+    <meta name="msapplication-TileColor" content="#da532c">
+    <meta name="theme-color" content="#ffffff">
+
     <title>A & B Online Marketing</title>
 
     <link rel="stylesheet" href="css/foundation.css">
@@ -58,11 +66,11 @@
     
             <div class="project cell medium-4">
                 <img class="projImg" src="./assets/Sites/westCoastKz.gif" alt="">
-                <div class="info">
-                    <h4>Sample Page</h4>
+                <div class="info third">
+                    <h4>WestCoastKustomRigz.com</h4>
                     <p>Built with</p>
-                    <img src="./assets/Brands/bootstrap-solid.svg" alt="">
-                    <img src="./assets/Brands/bootstrap-solid.svg" alt="">
+                    <img src="./assets/Brands/shopify_glyph.svg" alt="">
+                    <!-- <img src="./assets/Brands/bootstrap-solid.svg" alt=""> -->
                 </div>
             </div>
     
@@ -73,7 +81,10 @@
 
         <div class="grid-x grid-margin-x align-center aboutUs" id="aboutUs">        
                 <h2 class="cell text-center">About Us</h2>
-                <p class="cell small-10 text-justify">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Ratione magni omnis consequuntur, corrupti harum rem dolorem nostrum voluptates voluptatum explicabo tempora distinctio in commodi. Et optio ullam mollitia similique sapiente! Lorem, ipsum dolor sit amet consectetur adipisicing elit. Eos distinctio magnam earum culpa placeat odio dignissimos dolorum non inventore. Hic eaque pariatur sit dolore, exercitationem neque iste accusantium nostrum repellat. Lorem ipsum dolor sit amet consectetur adipisicing elit. Iusto ratione soluta voluptatibus excepturi quae, porro illum sapiente rem explicabo earum ipsa dolores perferendis, libero, odio sunt repudiandae aliquam provident natus?</p>
+                <p class="cell small-10 text-justify"><strong>A&B Marketing </strong> was founded with the idea that every business began with a vision. We help you create exposure by designing customer friendly websites at affordable prices to help increase traffic which in turn increases sales. We sit down with each prospective customer, asses what their needs are and formulate a plan according to their individual needs.
+                </p>  
+                <p class="cell small-10 text-justify">Here at <strong>A&B Marketing </strong>, we are committed to the success of our clients and we do so by merging the latest trends of design with an outburst of creative thinking. Our clients are sure not only to receive a website that increases traffic and sales but a website that represents their business.
+                </p>
         </div>
     
 
@@ -86,20 +97,20 @@
 
             <div class="cell medium-auto medium-cell-block-container">
 
-                <form id="contactForm" action="/form" method="POST">
+                <form id="contactForm" name="contactForm" action="/form" method="POST">
                     <div class="grid-x grid-padding-x align-center">
                         
                         <div class="cell medium-5 medium-cell-block-y">
                             <label>Name <span>*</span>
-                                <input name="name" class="required" type="text">
+                                <input name="name" class="required" type="text" >
                             </label>
 
                             <label>Email <span>*</span>
-                                <input name="email" class="required email" type="email">
+                                <input name="email" class="required email" type="email" >
                             </label>
                             
                             <label>Phone Number
-                                <input name="phone" class="required" type="tel">
+                                <input name="phone" class="" type="tel">
                             </label>
 
                         </div>
@@ -126,6 +137,17 @@
                         <input id="formSubmit" type="submit" class="button" value="Submit">
                     </div>
                 </form>
+
+                <div class="reveal text-center" id="contactSuccess" data-reveal data-animation-in="fade-in ">
+                    <h1>Thanks for the inquiry.</h1>
+                    <p class="lead">We will be in contact within 48 hours.</p>
+                    <button class="close-button" data-close aria-label="Close reveal" type="button">
+                      <span aria-hidden="true">&times;</span>
+                    </button>
+                  </div>
+
+
+
             </div>        
         </div>
 

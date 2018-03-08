@@ -14,58 +14,58 @@ $(document).ready(function(){
 
 
 
-    /*======= Validate Form ========*/
-    // $('#contactForm').validate({
-    //   rules: {
-    //     phone: {
-    //       phoneUS: true
-    //     },
-    //   }
-    // })
-    
-
-$('#formSubmit').on('click', function(){
-  var toSend = {
-    name:$('input[name=name]').val(),
-    email: $('input[name=email]').val(),
-    phone: $('input[name=phone]').val(),
-    interest: $("#interest").find(":selected").val(),
-    question: $("#question").val(),
-  };
-
-  $.ajax({
-    type: 'POST',
-    url: "/form",
-    data: toSend,
-    success: function(){     
-      alert('Thanks for contact us, we will be in touch within 48 hours')
+    /*======= Validate Form before Sending ========*/
+  $("#contactForm").validate({
+    rules: {
+      name: "required",
+      email: {
+        required: true,
+        email: true
+      }
     },
-    error: function(){
-      alert('Somehting went wrong, please try again')
+    messages: {
+      name: "Please enter a name for us to contact you by",
+      email: "Please enter a valid email address"
+    },
+    // Make sure the form is submitted to the destination defined
+    // in the "action" attribute of the form when valid
+    submitHandler: function(form) {      
+      var toSend = {
+        name:$('input[name=name]').val(),
+        email: $('input[name=email]').val(),
+        phone: $('input[name=phone]').val(),
+        interest: $("#interest").find(":selected").val(),
+        question: $("#question").val(),
+      };
+           
+      var $modal = new Foundation.Reveal($('#contactSuccess'));
       
+      $.ajax({
+        type: 'POST',
+        url: "/form",
+        data: toSend,
+        success: function(){     
+          console.log('Sent Email');
+          $modal.open();
+          form.reset();
+        },
+
+        error: function(){
+          alert('Somehting went wrong, please try again')
+          
+        }
+      });
+
+      return false;
     }
   });
 
 
-  
-  return false;
+
+
+
+
+
 });
 
-
-
-
-
-    // function sendForm(){
-    //   $.when($.ajax({
-    //     url: "http://localhost:9000/form",
-    //     type: 'json'
-    //   }))
-    //   .then(function(result) {
-    //     console.log(result);
-
-        
-    //   })
-    // }
-
-});
 

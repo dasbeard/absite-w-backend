@@ -85,7 +85,7 @@ body{
 }
 
 .main-container .project .info p{
-    margin-top: 38%;
+    margin-top: 35%;
     font-weight: 500;
 }
 
@@ -127,17 +127,23 @@ body{
     height: 7.5rem;
 }
 
-#contactUs label{
-    /* margin-bottom: 0; */
-    /* margin-top: 16px; */
-}
-
 #contactUs label #email-error, #contactUs label #name-error, #contactUs label #phone-error{
     color: rgb(255, 0, 0);
     text-shadow: 1px 1px var(--color4);
     position: relative;
     top: -15px;    
 }
+
+
+/* ==\/==\/==\/==\/== Reveal Section ==\/==\/==\/==\/== */
+#contactSuccess{
+    display: block;
+    top: 35vh !important;
+}
+
+
+
+
 
 
 @media screen and (max-width: 39.9375em) {
@@ -158,6 +164,12 @@ body{
     .main-container .project .info{
         position: relative;
         top: -275px;
+    }
+    
+    .main-container .project .third{
+        position: relative;
+        top: -250px;
+
     }
     
 

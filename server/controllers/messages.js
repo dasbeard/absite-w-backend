@@ -3,6 +3,8 @@ const mongoose = require('mongoose');
 var Message = mongoose.model('Message');
 
 const sgMail = require('@sendgrid/mail');
+sgMail.setApiKey(process.env.SENDGRID_API_KEY);
+
 
 module.exports = (function(){
   return {
@@ -22,7 +24,9 @@ module.exports = (function(){
         subject: 'New Inquiry',
         html: htmlStr,
       };
-      sgMail.send(msg);
+      // sgMail.send(msg);
+      
+      console.log(req.body);
       
       console.log('New email sent' .cyan);
       res.json({success: 'cool Bro'})
